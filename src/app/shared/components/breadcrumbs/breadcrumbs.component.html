@@ -1,0 +1,22 @@
+<nav class="breadcrumbs">
+    <ul class="menu">
+        <li class="menu__item" *ngFor="let link of links">
+            <!-- <span class="menu__link_decoration">/</span> -->
+            <a
+                *ngIf="!link.isActive"
+                routerLink="{{link.link}}"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{exact:true}"
+                class="menu__link">
+                {{link.name}}
+            </a>
+            <a
+                *ngIf="link.isActive"
+                routerLink="{{link.link}}"
+                routerLinkActive="active-link"
+                class="menu__link">
+                {{link.name}}
+            </a>
+        </li>
+    </ul>
+</nav>

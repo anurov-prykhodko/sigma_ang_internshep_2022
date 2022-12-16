@@ -1,0 +1,29 @@
+@import 'src/assets/styles/_variables';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  transition: 0.5s;
+
+  &__text {
+    color: $text-color-dark;
+    line-height: 29px;
+    font-size: $font-size-small;
+  
+    @media only screen and (max-width: $screen-xl) {
+      font-size: $font-size-theSmallest;
+    }
+
+    @media only screen and (max-width: $screen-l) {
+      width: 80%;
+      text-align: center;
+    }
+
+    &_link {
+      font-weight: $font-weight-bold;
+      color: $accent-color;
+    }
+  }
+}

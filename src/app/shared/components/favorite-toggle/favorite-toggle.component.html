@@ -1,0 +1,8 @@
+<i
+  class="icon"
+  [ngClass]="{
+    'icon-heart-active': favorite.isFavorite,
+    'icon-heart': !favorite.isFavorite
+  }"
+  (click)="onToggle()"
+></i>
